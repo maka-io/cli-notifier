@@ -112,8 +112,6 @@ class UpdateNotifier {
 			return this;
 		}
 
-		opts = Object.assign({isGlobal: isInstalledGlobally()}, opts);
-		
 		let defaultMessage = 'Update available ' + chalk().dim(this.update.current) + chalk().reset(' → ') +
 			chalk().green(this.update.latest) + ' \nRun ' + chalk().cyan('npm i ' + (opts.isGlobal ? '-g ' : '') + this.packageName) + '@latest to update';
 
